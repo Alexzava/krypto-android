@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/pickFileFragment">
+    <fragment
+        android:id="@+id/pickFileFragment"
+        android:name="com.alexzava.krypto.PickFileFragment"
+        android:label="fragment_pick_file"
+        tools:layout="@layout/fragment_pick_file" >
+        <action
+            android:id="@+id/action_pickFileFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_pickFileFragment_to_newKeyPairFragment"
+            app:destination="@id/newKeyPairFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.alexzava.krypto.PasswordFragment"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" >
+        <action
+            android:id="@+id/action_passwordFragment_to_actionFragment"
+            app:destination="@id/actionFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <argument
+            android:name="uriStr"
+            app:argType="string" />
+        <argument
+            android:name="action"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_passwordFragment_to_newKeyPairFragment"
+            app:destination="@id/newKeyPairFragment" />
+        <argument
+            android:name="scannedPublicKey"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionFragment"
+        android:name="com.alexzava.krypto.CompleteActionFragment"
+        android:label="fragment_action"
+        tools:layout="@layout/fragment_complete_action" >
+        <action
+            android:id="@+id/action_actionFragment_to_pickFileFragment"
+            app:destination="@id/pickFileFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <argument
+            android:name="uriStr"
+            app:argType="string" />
+        <argument
+            android:name="action"
+            app:argType="string" />
+        <argument
+            android:name="keyHex"
+            app:argType="string" />
+        <argument
+            android:name="keySaltHex"
+            app:argType="string" />
+        <argument
+            android:name="keyMode"
+            app:argType="string" />
+        <argument
+            android:name="publicKey"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/newKeyPairFragment"
+        android:name="com.alexzava.krypto.NewKeyPairFragment"
+        android:label="fragment_new_key_pair"
+        tools:layout="@layout/fragment_new_key_pair" >
+        <action
+            android:id="@+id/action_newKeyPairFragment_to_pickFileFragment"
+            app:destination="@id/pickFileFragment" />
+    </fragment>
+</navigation>

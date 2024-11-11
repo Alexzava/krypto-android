@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KRYPTO" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorPrimaryContainer">@color/primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/onPrimaryContainer</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/onSecondary</item>
+        <item name="colorSecondaryContainer">@color/secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/onSecondaryContainer</item>
+    </style>
+    <style name="Theme.KRYPTO" parent="Base.Theme.KRYPTO" />
+    
+    <style name="textTitlePrimary" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textTitleSecondary" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="iconButton">
+        <item name="android:minWidth">@dimen/m3_btn_icon_only_min_width</item>
+        <item name="android:paddingLeft">@dimen/m3_btn_icon_only_default_padding</item>
+        <item name="android:paddingRight">@dimen/m3_btn_icon_only_default_padding</item>
+        <item name="android:paddingTop">@dimen/m3_btn_icon_only_default_padding</item>
+        <item name="android:paddingBottom">@dimen/m3_btn_icon_only_default_padding</item>
+        <item name="android:insetLeft">@dimen/m3_btn_inset</item>
+        <item name="android:insetRight">@dimen/m3_btn_inset</item>
+        <item name="iconSize">@dimen/m3_btn_icon_only_default_size</item>
+        <item name="iconPadding">@dimen/m3_btn_icon_only_icon_padding</item>
+        <!--<item name="backgroundTint">@color/secondaryContainer</item>-->
+    </style>
+
+    <style name="shareTextButton" parent="@style/Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/black</item>
+        <item name="iconTint">@color/black</item>
+        <item name="iconSize">24dp</item>
+    </style>
+
+    <style name="shareTextIconButton" parent="shareTextButton">
+        <item name="android:minWidth">@dimen/m3_btn_icon_only_min_width</item>
+        <item name="android:paddingLeft">@dimen/m3_btn_icon_only_default_padding</item>
+        <item name="android:paddingRight">@dimen/m3_btn_icon_only_default_padding</item>
+        <item name="android:paddingTop">@dimen/m3_btn_icon_only_default_padding</item>
+        <item name="android:paddingBottom">@dimen/m3_btn_icon_only_default_padding</item>
+        <item name="android:insetLeft">@dimen/m3_btn_inset</item>
+        <item name="android:insetRight">@dimen/m3_btn_inset</item>
+        <item name="iconPadding">@dimen/m3_btn_icon_only_icon_padding</item>
+    </style>
+
+    <style name="appToolbar">
+        <item name="navigationIconTint">@color/black</item>
+    </style>
+</resources>

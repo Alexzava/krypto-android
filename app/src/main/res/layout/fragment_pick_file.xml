@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PickFileFragment">
+
+    <include
+    android:id="@+id/viewAppToolBar"
+    layout="@layout/view_app_toolbar"/>
+
+    <TextView
+        android:id="@+id/appTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:textAppearance="@style/textTitlePrimary"
+        android:text="@string/app_name"
+        app:layout_constraintTop_toBottomOf="@id/viewAppToolBar"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/helperTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/pick_file_fragment_helper_text"
+        app:layout_constraintTop_toBottomOf="@id/appTitleText"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/pickFileActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/pick_file_button_description"
+        android:src="@drawable/ic_round_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button" />
+
+    <Button
+        android:id="@+id/generateKeypairActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"
+        android:text="@string/pick_file_fragment_generate_keypair_button"
+        app:layout_constraintBottom_toTopOf="@id/scanQRCodeActionButton"
+        app:layout_constraintEnd_toStartOf="@+id/generateKeypairActionButtonIcon"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
+
+    <Button
+        android:id="@+id/generateKeypairActionButtonIcon"
+        style="@style/iconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"
+        app:icon="@drawable/ic_round_key_24"
+        app:layout_constraintBottom_toTopOf="@id/scanQRCodeActionButtonIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
+
+    <Button
+        android:id="@+id/scanQRCodeActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"
+        android:text="@string/pick_file_fragment_scan_qr_code_button"
+        app:layout_constraintBottom_toTopOf="@id/encryptActionButton"
+        app:layout_constraintEnd_toStartOf="@+id/scanQRCodeActionButtonIcon"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
+
+    <Button
+        android:id="@+id/scanQRCodeActionButtonIcon"
+        style="@style/iconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"
+        app:icon="@drawable/ic_round_qr_code_scanner_24"
+        app:layout_constraintBottom_toTopOf="@id/encryptActionButtonIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
+
+    <Button
+        android:id="@+id/encryptActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"
+        android:text="@string/pick_file_fragment_encrypt_button"
+        app:layout_constraintBottom_toTopOf="@id/decryptActionButton"
+        app:layout_constraintEnd_toStartOf="@+id/encryptActionButtonIcon"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
+
+    <Button
+        android:id="@+id/encryptActionButtonIcon"
+        style="@style/iconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"
+        app:icon="@drawable/ic_round_enhanced_encryption_24"
+        app:layout_constraintBottom_toTopOf="@id/decryptActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
+
+    <Button
+        android:id="@+id/decryptActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"
+        android:text="@string/pick_file_fragment_decrypt_button"
+        app:layout_constraintBottom_toTopOf="@id/pickFileActionButton"
+        app:layout_constraintEnd_toStartOf="@+id/decryptActionButtonIcon"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
+
+    <Button
+        android:id="@+id/decryptActionButtonIcon"
+        style="@style/iconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"
+        app:icon="@drawable/ic_round_no_encryption_24"
+        app:layout_constraintBottom_toTopOf="@id/pickFileActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name" translatable="false">Krypto</string>
+
+    <string name="generic_next_action_button_description">Next Action Button</string>
+    <string name="private_key_export_success">Exported in download folder</string>
+    <string name="public_key_copied">Public key copied</string>
+
+    <!-- Pick File Fragment -->
+    <string name="pick_file_button_description">Pick File Button</string>
+    <string name="pick_file_fragment_encrypt_button">Encrypt</string>
+    <string name="pick_file_fragment_decrypt_button">Decrypt</string>
+    <string name="pick_file_fragment_generate_keypair_button">Generate Key Pair</string>
+    <string name="pick_file_fragment_scan_qr_code_button">Scan QR code</string>
+    <string name="pick_file_fragment_helper_text">Choose an action to perform</string>
+    <string name="pick_file_fragment_text_helper_document_loaded">Document loaded. Choose an action to perform</string>
+    <string name="pick_file_fragment_text_helper_public_key_loaded">Public key loaded. Choose an action to perform</string>
+
+    <!-- Notification -->
+    <string name="notification_channel_description">Notify the progress of encryption or decryption</string>
+    <string name="notification_done_title">Done</string>
+    <string name="notification_done_content">File saved in download folder</string>
+    <string name="notification_processing_title">Processing…</string>
+
+    <!-- Password Fragment -->
+    <string name="password_fragment_password_tab_title">Use Password</string>
+    <string name="password_fragment_public_key_tab_title">Use Public Key</string>
+    <string name="password_fragment_proceed_to_encrypt">Proceed to encrypt your file</string>
+    <string name="password_fragment_proceed_to_decrypt">Proceed to decrypt your file</string>
+
+    <!-- Password View -->
+    <string name="password_input_view_title">Choose a password</string>
+    <string name="password_input_view_hint">Password</string>
+    <string name="password_input_view_generate_button">Generate</string>
+
+    <!-- Public Key View -->
+    <string name="public_key_input_view_personal_public_key_input_hint">Personal Public Key</string>
+    <string name="public_key_input_view_personal_private_key_hint">Personal Private Key</string>
+    <string name="public_key_input_view_recipient_public_key_hint">Recipient\'s Public Key</string>
+
+    <string name="public_key_input_view_personal_public_key_helper">This is your public key. Share it with the recipient to generate a shared secret key</string>
+    <string name="public_key_input_view_personal_private_key_helper">This is your private key, do not share with anyone and save a copy in a safe place</string>
+    <string name="personal_private_key_input_helper_disabled">Paste or load your private key</string>
+
+    <string name="public_key_input_view_recipient_public_key_helper">Paste or Scan the recipient\'s public key</string>
+    <string name="public_key_input_view_title">Import your private key</string>
+    <string name="public_key_input_view_generate_button">Generate</string>
+
+    <!-- New Keypair Fragment -->
+    <string name="new_key_pair_fragment_title">Generate new key pair</string>
+    <string name="new_key_pair_fragment_generate_button">Generate</string>
+    <string name="new_key_pair_fragment_export_button">Export</string>
+
+    <!-- Complete Action Fragment -->
+    <string name="complete_fragment_encrypting">Encrypting your file…</string>
+    <string name="complete_fragment_decrypting">Decrypting your file…</string>
+    <string name="complete_fragment_wrong_password">Error: Wrong password</string>
+    <string name="complete_fragment_process_done">Done. File saved in download folder</string>
+    <string name="complete_action_fragment_share_button">Share</string>
+
+    <!-- Share Bottom Sheet -->
+    <string name="share_bottom_sheet_view_qr_code_desc">Share link QR code</string>
+    <string name="share_bottom_sheet_view_copy_link">Copy link</string>
+    <string name="share_bottom_sheet_view_copy_public_key">Copy public key</string>
+    <string name="share_bottom_sheet_view_link_switch">Hat.sh</string>
+
+    <!-- Errors -->
+    <string name="error_generic_unable_to_open_file">Error: Unable to open the selected file</string>
+    <string name="error_generic_password_too_short">Password is too short</string>
+    <string name="error_generic_invalid_private_key">Error: Invalid private key</string>
+    <string name="error_generic_invalid_public_key">Error: Invalid public key</string>
+    <string name="error_generic_invalid_keys">Error: Invalid keys</string>
+    <string name="error_generic_unable_to_export_private_key">Error: Unable to export private key</string>
+</resources>

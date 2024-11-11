@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CompleteActionFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/viewAppToolBar"
+            layout="@layout/view_app_toolbar"/>
+
+        <TextView
+            android:id="@+id/actionHintText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="@string/complete_fragment_encrypting"
+            android:textAppearance="@style/textTitleSecondary"
+            app:layout_constraintTop_toBottomOf="@id/viewAppToolBar"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:layout_constraintTop_toBottomOf="@id/actionHintText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/progressIndicator"
+            app:layout_constraintBottom_toBottomOf="@id/progressIndicator"
+            app:layout_constraintStart_toEndOf="@id/progressIndicator" />
+
+        <Button
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:id="@+id/shareActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/complete_action_fragment_share_button"
+            android:visibility="invisible"
+            app:icon="@drawable/ic_round_share_24"
+            app:layout_constraintTop_toBottomOf="@id/actionHintText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/nextActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/generic_next_action_button_description"
+            android:src="@drawable/ic_round_done_24"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/bottomSheetBackground"
+        android:background="#99000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include
+        android:id="@+id/viewShareBottomSheet"
+        layout="@layout/view_share_bottom_sheet"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

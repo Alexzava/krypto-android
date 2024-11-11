@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Material3.BottomSheet"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/drag_handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/linkSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:text="@string/share_bottom_sheet_view_link_switch" />
+
+    <ImageView
+        android:id="@+id/shareQrCodeImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/share_bottom_sheet_view_qr_code_desc" />
+
+    <Button
+        style="@style/shareTextButton"
+        android:id="@+id/copyLinkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical|start"
+        android:text="@string/share_bottom_sheet_view_copy_link"
+        app:icon="@drawable/ic_outline_share_24"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button"/>
+
+    <Button
+        style="@style/shareTextButton"
+        android:id="@+id/copyPublicKeyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|start"
+        android:text="@string/share_bottom_sheet_view_copy_public_key"
+        app:icon="@drawable/ic_outline_share_24"
+        app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.Button"/>
+</LinearLayout>
