@@ -1,5 +1,8 @@
 # Krypto for Android
 
+![GitHub License](https://img.shields.io/github/license/alexzava/krypto-android?style=flat&color=%2358bf43)
+[![CodeQL Advanced](https://github.com/Alexzava/krypto-android/actions/workflows/codeql.yml/badge.svg)](https://github.com/Alexzava/krypto-android/actions/workflows/codeql.yml)
+
 Krypto for Android is a simple and secure app to protect your private documents with strong encryption.
 
 Windows and Linux versions are coming soon.
