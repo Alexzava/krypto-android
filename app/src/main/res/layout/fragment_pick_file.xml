@@ -11,16 +11,26 @@
     android:id="@+id/viewAppToolBar"
     layout="@layout/view_app_toolbar"/>
 
+    <ImageView
+        android:id="@+id/kryptoLogoImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewAppToolBar"
+        />
+
     <TextView
         android:id="@+id/appTitleText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:textAppearance="@style/textTitlePrimary"
+        android:layout_marginStart="10dp"
         android:text="@string/app_name"
-        app:layout_constraintTop_toBottomOf="@id/viewAppToolBar"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:textAppearance="@style/textTitlePrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/kryptoLogoImage"
+        app:layout_constraintStart_toEndOf="@id/kryptoLogoImage"
+        app:layout_constraintTop_toBottomOf="@id/viewAppToolBar" />
 
     <TextView
         android:id="@+id/helperTextView"
