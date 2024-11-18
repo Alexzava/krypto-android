@@ -5,9 +5,7 @@
 
 Krypto for Android is a simple and secure app to protect your private documents with strong encryption.
 
-Windows and Linux versions are coming soon.
-
-![Description here](images/screenshot.png)
+![Screenshot](images/screenshot.png)
 
 ## Key Features
 - **XChaCha20-Poly1305** algorithm for symmetric encryption ([Read more](https://doc.libsodium.org/secret-key_cryptography/secretstream))
@@ -21,6 +19,10 @@ All cryptographic algorithms are from the [libsodium](https://doc.libsodium.org/
 ## Download/Installation
 
 [Download here](https://github.com/Alexzava/krypto-android/releases)
+
+### Windows or Linux
+
+[Krypto for Windows or Linux](https://github.com/Alexzava/krypto)
 
 ## Open source resources
 
